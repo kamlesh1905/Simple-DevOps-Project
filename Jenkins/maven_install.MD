@@ -15,15 +15,41 @@ Maven is a code build tool which used to convert your code to an artifact. this 
      # downloading maven version 3.6.0
      wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
      tar -xvzf apache-maven-3.6.1-bin.tar.gz
+     
+     OR 
+     
+     cd /opt
+     # downloading maven version 3.6.0
+     wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+     tar -xvzf apache-maven-3.6.1-bin.tar.gz
+     rm -f apache-maven-3.6.1-bin.tar.gz
+     mv apache-maven-3.6.1-bin.tar.gz maven
+     
      ```
 	
-1. Setup M2_HOME and M2 paths in .bash_profile of the user and add these to the path variable
+1. Setup M2_HOME and M2 and JAVA_HOME paths in .bash_profile of the user and add these to the path variable
    ```sh
    vi ~/.bash_profile
    M2_HOME=/opt/maven/apache-maven-3.6.1
    M2=$M2_HOME/bin
    PATH=<Existing_PATH>:$M2_HOME:$M2
    ```
+   or 
+   
+   vi ~/.bash_profile
+   M2_HOME=/opt/maven
+   M2=/opt/maven/bin
+   JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.13.0.8-1.amzn2.0.3.x86_64
+   PATH=<Existing_PATH>:$M2_HOME:$M2:$JAVA_HOME
+   
+   Command to find java path
+   `````````````````````````
+   find / -name java-11*
+   
+   source .bash_profile
+   echo $PATH
+   ```
+   
 #### Checkpoint 
 1. logoff and login to check maven version
   
