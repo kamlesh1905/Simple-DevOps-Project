@@ -60,6 +60,38 @@ Install Vi editor in docker container
 apt-get update
 apt-get install vim
 
+### Access tomcat application from browser on port 8080
+
+(http://<Public_IP>:8080
+
+now application is accessible on port 8080. but tomcat application doesnt allow to login from browser. changing a default parameter in context.xml does address this issue
+
+#search for context.xml
+find / -name context.xml
+above command gives 3 context.xml files. comment () Value ClassName field on files which are under webapp directory. After that restart tomcat services to effect these changes. At the time of writing this lecture below 2 files are updated.
+
+vi /usr/local/tomcat/webapps/host-manager/META-INF/context.xml
+vi /usr/local/tomcat/webapps/manager/META-INF/context.xml
+
+ln -s /usr/local/tomcat/bin/startup.sh /usr/local/bin/tomcatup
+ln -s /usr/local/tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
+
+tomcatup
+
+# Restart tomcat services
+
+tomcatdown  
+tomcatup
+
+Update users information in the tomcat-users.xml file goto tomcat home directory and Add below users to conf/tomcat-users.xml file
+ <role rolename="manager-gui"/>
+ <role rolename="manager-script"/>
+ <role rolename="manager-jmx"/>
+ <role rolename="manager-status"/>
+ <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+ <user username="deployer" password="deployer" roles="manager-script"/>
+ <user username="tomcat" password="s3cret" roles="manager-gui"/>
+Restart serivce and try to login to tomcat application from the browser. This time it should be Successful)
 
    
 ### Validation test
