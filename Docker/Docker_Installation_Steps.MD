@@ -54,6 +54,13 @@ cp -R * ../webapps/
 Now check tomcat server working or not
 
 Ipaddress:8080 
+
+Install Vi editor in docker container
+`````````````````````````````````````
+apt-get update
+apt-get install vim
+
+
    
 ### Validation test
 1. Create a tomcat docker container by pulling a docker image from the public docker registry
