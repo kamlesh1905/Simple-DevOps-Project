@@ -23,6 +23,38 @@
    ```
    usermod -aG docker dockeradmin
    ```
+## Pull Docker Image
+
+1.docker pull tomcat
+
+docker images
+`````````````
+cmd - docker images
+
+REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+tomcat       latest    7a91e6f458bb   6 days ago   475MB
+
+launch container
+````````````````
+docker run -d --name mycontainer -p 8080:8080 tomcat
+
+CONTAINER ID   IMAGE     COMMAND             CREATED          STATUS          PORTS                                       NAMES
+752bd51a929d   tomcat    "catalina.sh run"   14 minutes ago   Up 14 minutes   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   mycontainer
+
+login to this docker container
+``````````````````````````````
+docker exec -it mycontainer /bin/bash
+
+login to container path --->root@752bd51a929d:/usr/local/tomcat#
+
+cd /webapps.dist
+
+cp -R * ../webapps/
+
+Now check tomcat server working or not
+
+Ipaddress:8080 
+   
 ### Validation test
 1. Create a tomcat docker container by pulling a docker image from the public docker registry
    ```sh
