@@ -23,6 +23,15 @@
    ```
    usermod -aG docker dockeradmin
    ```
+   
+1. Allow ec2-user to accept password based auth 
+   ```
+   vi /etc/ssh/sshd_config
+   
+   ##enable password based authentication
+   
+   service sshd reload
+   ```
 ## Pull Docker Image
 
 1.docker pull tomcat
