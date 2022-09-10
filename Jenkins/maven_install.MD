@@ -46,6 +46,8 @@ Maven is a code build tool which used to convert your code to an artifact. this 
    `````````````````````````
    find / -name java-11*
    
+   Return back to root path and enter below command
+   ````````````````````````````````````````````````
    source .bash_profile
    echo $PATH
    ```
