@@ -53,6 +53,9 @@ Access tomcat application from browser on port 8090
 After that restart tomcat services to effect these changes. 
 At the time of writing this lecture below 2 files are updated. 
    ```sh 
+   
+   [root@ip-172-31-5-178 conf]#  -  execution path for below command
+   
    /opt/tomcat/webapps/host-manager/META-INF/context.xml
    /opt/tomcat/webapps/manager/META-INF/context.xml
    
