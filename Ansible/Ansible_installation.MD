@@ -31,9 +31,9 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    
    #Add ansadmin to visudo file to login without password
    
-   ## Allows people in group wheel to run all commands
-         %wheel  ALL=(ALL)       ALL
-         ansadmin ALL=(ALL)      ALL  -------------- added
+   ## Same thing without a password
+    # %wheel        ALL=(ALL)       NOPASSWD: ALL
+      ansadmin ALL=(ALL)       NOPASSWD: ALL
 
 1. Below command grant sudo access to ansadmin user. But we strongly recommended using "visudo" command if you are aware vi or nano editor.  (on Control node and Managed host)
    ```sh
