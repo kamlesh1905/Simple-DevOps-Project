@@ -35,6 +35,8 @@ Ansible is an open-source automation platform. It is very, very simple to set up
       
 ## Now enable password based authentication
 
+vi /etc/ssh/sshd_config
+
 # PasswordAuthentication yes
 #PermitEmptyPasswords no
 PasswordAuthentication no
@@ -44,6 +46,11 @@ remove # symbol from PasswordAuthentication yes and
 PasswordAuthentication yes
 #PermitEmptyPasswords no
 #PasswordAuthentication no
+
+exc
+shift :wq enter to save the file.
+
+service sshd reload
 
 1. Below command grant sudo access to ansadmin user. But we strongly recommended using "visudo" command if you are aware vi or nano editor.  (on Control node and Managed host)
    ```sh
