@@ -35,9 +35,9 @@ Ansible is an open-source automation platform. It is very, very simple to set up
       
 ## Now enable password based authentication
 
-vi /etc/ssh/sshd_config
+1. vi /etc/ssh/sshd_config
 
-# PasswordAuthentication yes
+#PasswordAuthentication yes
 #PermitEmptyPasswords no
 PasswordAuthentication no
 
