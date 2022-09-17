@@ -25,6 +25,16 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    useradd ansadmin
    passwd ansadmin
    ```
+ 1. Add user to sudo file
+ 
+   visudo
+   
+   #Add ansadmin to visudo file to login without password
+   
+   ## Allows people in group wheel to run all commands
+         %wheel  ALL=(ALL)       ALL
+         ansadmin ALL=(ALL)      ALL  -------------- added
+
 1. Below command grant sudo access to ansadmin user. But we strongly recommended using "visudo" command if you are aware vi or nano editor.  (on Control node and Managed host)
    ```sh
    echo "ansadmin ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
