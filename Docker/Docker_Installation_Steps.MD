@@ -23,6 +23,13 @@
    ```
    usermod -aG docker dockeradmin
    ```
+ 1. Ec2 instances doesn't allow password based authentication. We need to all in below file
+   ```
+   vi /etc/ssh/sshd_config
+   ```
+   service sshd reload
+   ```
+   
 ### Validation test
 1. Create a tomcat docker container by pulling a docker image from the public docker registry
    ```sh
