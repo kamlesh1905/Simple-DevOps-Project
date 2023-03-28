@@ -32,6 +32,11 @@
    
    service sshd reload
    ```
+1. Create docker folder under /opt and provide dockeradmin rights to folder recursively.This folder will help to copy artifact and make dockerfile to create image and container
+   
+   chown -R dockeradmin:dockeradmin docker 
+   
+   
 ## Pull Docker Image
 
 1.docker pull tomcat
