@@ -164,8 +164,8 @@ COPY ./*.war /usr/local/tomcat/webapps
 
 docker run -d --name mycontainer -p 8080:8080 mytomcat
 
-cd /opt/docker
-docker build -t regapp:v1 .:
-docker stop registerapp:
-docker rm registerapp:
+cd /opt/docker;
+docker build -t regapp:v1 .;
+docker stop registerapp;
+docker rm registerapp;
 docker run -d --name registerapp -p 8080:8080 regapp:v1
