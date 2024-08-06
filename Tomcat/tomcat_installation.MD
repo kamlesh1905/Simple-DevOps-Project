@@ -76,3 +76,65 @@ goto tomcat home directory and Add below users to conf/tomcat-users.xml file
    ```
 1. Restart serivce and try to login to tomcat application from the browser. This time it should be Successful
 
+
+-------------------------------------------- update -----------------------------------------------------------
+
+M2_HOME:/opt/maven/apache-maven-3.9.8
+M2:$M2_HOME/bin
+JAVA_HOME:/usr/lib/jvm/java-11-openjdk-11.0.23.0.9-2.amzn2.0.1.x86_64
+
+
+M2_HOME=/opt/maven/apache-maven-3.6.1
+M2=$M2_HOME/bin
+
+chmod +x /opt/tomcat/apache-tomcat-9.0.91/bin/startup.sh
+
+chmod +x /opt/tomcat/apache-tomcat-9.0.91/bin/shutdown.sh
+
+ln -s /opt/tomcat/apache-tomcat-9.0.91/bin/startup.sh /usr/local/bin/tomcatup
+ln -s /opt/tomcat/apache-tomcat-9.0.91/bin/shutdown.sh /usr/local/bin/tomcatdown
+
+
+cat /opt/tomcat/apache-tomcat-9.0.91/webapps/host-manager/META-INF/context.xml
+
+vi /opt/tomcat/apache-tomcat-9.0.91/webapps/host-manager/META-INF/context.xml
+
+cat /opt/tomcat/apache-tomcat-9.0.91/webapps/manager/META-INF/context.xml
+
+vi /opt/tomcat/apache-tomcat-9.0.91/webapps/manager/META-INF/context.xml
+
+cat /opt/tomcat/apache-tomcat-9.0.91/conf/tomcat-users.xml
+
+vi /opt/tomcat/apache-tomcat-9.0.91/conf/tomcat-users.xml
+
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+<user username="deployer" password="deployer" roles="manager-script"/>
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
