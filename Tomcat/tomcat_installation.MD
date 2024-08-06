@@ -84,9 +84,6 @@ M2:$M2_HOME/bin
 JAVA_HOME:/usr/lib/jvm/java-11-openjdk-11.0.23.0.9-2.amzn2.0.1.x86_64
 
 
-M2_HOME=/opt/maven/apache-maven-3.6.1
-M2=$M2_HOME/bin
-
 chmod +x /opt/tomcat/apache-tomcat-9.0.91/bin/startup.sh
 
 chmod +x /opt/tomcat/apache-tomcat-9.0.91/bin/shutdown.sh
