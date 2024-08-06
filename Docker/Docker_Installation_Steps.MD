@@ -155,3 +155,17 @@ Please follow below steps to install docker CE on CentoOS server instance. For R
    ```sh
    sudo docker run hello-world
    ```
+--------------------- new ---------------------------------
+
+FROM tomcat:latest
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+COPY ./*.war /usr/local/tomcat/webapps
+
+
+docker run -d --name mycontainer -p 8080:8080 mytomcat
+
+cd /opt/docker
+docker build -t regapp:v1 .:
+docker stop registerapp:
+docker rm registerapp:
+docker run -d --name registerapp -p 8080:8080 regapp:v1
