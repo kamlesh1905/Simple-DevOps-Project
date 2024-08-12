@@ -9,6 +9,13 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    - Security Group with Port `8080` open for internet
 1. Java 11 should be installed  
 
+## Install Jenkins
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+
 
 ## Install Jenkins 
  You can install jenkins using the rpm or by setting up the repo. We will set up the repo so that we can update it easily in the future.
