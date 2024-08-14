@@ -84,25 +84,25 @@ M2:$M2_HOME/bin
 JAVA_HOME:/usr/lib/jvm/java-11-openjdk-11.0.23.0.9-2.amzn2.0.1.x86_64
 
 
-chmod +x /opt/tomcat/apache-tomcat-9.0.91/bin/startup.sh
+chmod +x /opt/tomcat/apache-tomcat-9.0.93/bin/startup.sh
 
-chmod +x /opt/tomcat/apache-tomcat-9.0.91/bin/shutdown.sh
+chmod +x /opt/tomcat/apache-tomcat-9.0.93/bin/shutdown.sh
 
-ln -s /opt/tomcat/apache-tomcat-9.0.91/bin/startup.sh /usr/local/bin/tomcatup
-ln -s /opt/tomcat/apache-tomcat-9.0.91/bin/shutdown.sh /usr/local/bin/tomcatdown
+ln -s /opt/tomcat/apache-tomcat-9.0.93/bin/startup.sh /usr/local/bin/tomcatup
+ln -s /opt/tomcat/apache-tomcat-9.0.93/bin/shutdown.sh /usr/local/bin/tomcatdown
 
 
-cat /opt/tomcat/apache-tomcat-9.0.91/webapps/host-manager/META-INF/context.xml
+cat /opt/tomcat/apache-tomcat-9.0.93/webapps/host-manager/META-INF/context.xml
 
-vi /opt/tomcat/apache-tomcat-9.0.91/webapps/host-manager/META-INF/context.xml
+vi /opt/tomcat/apache-tomcat-9.0.93/webapps/host-manager/META-INF/context.xml
 
-cat /opt/tomcat/apache-tomcat-9.0.91/webapps/manager/META-INF/context.xml
+cat /opt/tomcat/apache-tomcat-9.0.93/webapps/manager/META-INF/context.xml
 
-vi /opt/tomcat/apache-tomcat-9.0.91/webapps/manager/META-INF/context.xml
+vi /opt/tomcat/apache-tomcat-9.0.93/webapps/manager/META-INF/context.xml
 
-cat /opt/tomcat/apache-tomcat-9.0.91/conf/tomcat-users.xml
+cat /opt/tomcat/apache-tomcat-9.0.93/conf/tomcat-users.xml
 
-vi /opt/tomcat/apache-tomcat-9.0.91/conf/tomcat-users.xml
+vi /opt/tomcat/apache-tomcat-9.0.93/conf/tomcat-users.xml
 
 <role rolename="manager-gui"/>
 <role rolename="manager-script"/>
